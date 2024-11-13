@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flex-grow {
+    flex-grow: 0.8;
+}

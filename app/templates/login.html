@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+    <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url('{{ url_for('static', filename='img/bglogin.png') }}');">
+        <div class="absolute bg-gradient-to-b from-neutral-900 to-neutral-950 opacity-50 inset-0 z-0"></div>
+        <div class="min-h-screen sm:flex sm:flex-row mx-0 justify-center">
+            <div class="flex-col flex  self-center p-10 sm:max-w-5xl xl:max-w-2xl  z-10">
+                <div class="self-start hidden lg:flex flex-col  text-white">
+                    <img src="" class="mb-3">
+                    <h1 class="mb-3 font-bold text-5xl">¡Hola! Bienvenido a JAR Industries</h1>
+                    <p class="pr-3">Estamos listos para ayudarte a continuar con tus actividades. Ya sea que necesites ayuda con tus calificaciones o gestión de materias.</p>
+                </div>
+            </div>
+            <div class="flex justify-center self-center  z-10">
+                <div class="p-12 glass mx-auto rounded-2xl w-100 ">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-2xl text-white">Inicio de sesión</h3>
+                        <p class="text-white">Ingresa a tu cuenta</p>
+                    </div>
+                    <div class="space-y-5">
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-white tracking-wide">Correo Electrónico</label>
+                            <input id="email"
+                                class=" w-full text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-green-400"
+                                type="" placeholder="sapita@gmail.com">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="mb-5 text-sm font-medium text-white tracking-wide">
+                                Contraseña
+                            </label>
+                            <input id="password"
+                                class="w-full content-center text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-green-400"
+                                type="password" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <div id="errorArea"></div>
+                    </div>
+                    <div>
+                        <button id="sendLogin" type="submit"
+                            class="btn glass text-white">
+                            Ingresar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,20 @@
+{
+  "name": "chatbotgina",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./app/static/css/tailwind.css -o ./app/static/css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./app/static/css/tailwind.css -o ./app/static/css/styles.css --watch"  
+  },
+  "keywords": ["ChatBot","Academic","MultiAgents"],
+  "author": "Camilo Andres Rodriguez Reyes, Ariel Camilo Sanchez Lopez",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.14",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.14"
+  }
+}

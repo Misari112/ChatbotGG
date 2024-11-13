@@ -1,0 +1,46 @@
+<!-- app/templates/index.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex w-full">
+    <div class="card w-100 bg-base-100 shadow-xl transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
+    <div class="card glass">
+            <figure>
+                <img
+                    src="{{ url_for('static', filename='img/gladys.png') }}"
+                    alt="Gladys Chatbot" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title text-white">Chatbot Gladys</h2>
+                <p class="text-white">Inscribe tus materias y gestiona tus cursos de manera eficiente.</p>
+                <div class="card-actions justify-end">
+                    <a href="{{ url_for('routes.chat_gladys') }}">
+                        <button class="btn btn-primary">Utilizar ahora!</button>
+                    </a>           
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider divider-horizontal"></div>
+    <!-- Tarjeta para Chatbot Gina -->
+    <div class="card w-100 bg-base-100 shadow-xl transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
+        <div class="card glass">
+            <figure>
+                <img
+                    src="{{ url_for('static', filename='img/gina.png') }}"
+                    alt="Gina Chatbot" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title text-white">Chatbot Gina</h2>
+                <p class="text-white">Califica tus trabajos en formato PDF de manera rápida y precisa.</p>
+                <div class="card-actions justify-end">
+                    <a href="{{ url_for('routes.chat_gina') }}">
+                        <button class="btn btn-primary">Utilizar ahora!</button>
+                    </a>            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
